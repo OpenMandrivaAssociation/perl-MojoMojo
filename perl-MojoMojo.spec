@@ -113,13 +113,9 @@ To find out more about how you can use MojoMojo, please visit
 http://mojomojo.org or read the installation instructions in the
 MojoMojo::Installation manpage to try it out yourself.
 
-expand_wikilink
-    Proxy method for the the MojoMojo::Formatter::Wiki manpage
-    expand_wikilink method.
-
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p1 -b.testlib
+%patch0 -p1 -b .testlib
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
