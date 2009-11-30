@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Syntax-highlight docbook
 License:    GPL+ or Artistic
@@ -65,6 +65,7 @@ BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Image::ExifTool)
 BuildRequires: perl(Image::Math::Constrain)
 BuildRequires: perl(Imager)
+BuildRequires: perl(JSON)
 BuildRequires: perl(JSON::XS)
 BuildRequires: perl(KinoSearch)
 BuildRequires: perl(LWP::Simple)
