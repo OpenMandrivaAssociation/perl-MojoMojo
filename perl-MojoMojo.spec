@@ -11,6 +11,7 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module//%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:     MojoMojo-0.999041-fragile-regex-in-test-lib.patch
+Patch1:     MojoMojo-0.999041-fix-root-forms-with-yaml-xs.patch
 
 BuildRequires: perl(Algorithm::Diff)
 BuildRequires: perl(Algorithm::Merge)
@@ -94,7 +95,7 @@ BuildRequires: perl(WWW::Mechanize::TreeBuilder)
 BuildRequires: perl(XML::Feed)
 BuildRequires: perl(XML::LibXML)
 BuildRequires: perl(XML::LibXSLT)
-BuildRequires: perl(YAML)
+BuildRequires: perl(YAML::XS)
 BuildRequires: perl(parent)
 
 BuildArch: noarch
@@ -116,6 +117,7 @@ MojoMojo::Installation manpage to try it out yourself.
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p1 -b .testlib
+%patch1 -p1 -b .yamlxs
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
