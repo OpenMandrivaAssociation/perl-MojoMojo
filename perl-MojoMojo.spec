@@ -138,6 +138,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes README
+%{_mandir}/man1/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
+%{_bindir}/*
