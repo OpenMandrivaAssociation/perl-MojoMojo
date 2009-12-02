@@ -1,17 +1,15 @@
 %define upstream_name    MojoMojo
-%define upstream_version 0.999041
+%define upstream_version 0.999042
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
 
-Summary:    Syntax-highlight docbook
+Summary:    A Catalyst & DBIx::Class powered Wiki
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module//%{upstream_name}-%{upstream_version}.tar.gz
-Patch0:     MojoMojo-0.999041-fragile-regex-in-test-lib.patch
-Patch1:     MojoMojo-0.999041-fix-root-forms-with-yaml-xs.patch
 
 BuildRequires: perl(Algorithm::Diff)
 BuildRequires: perl(Algorithm::Merge)
@@ -117,8 +115,6 @@ MojoMojo::Installation manpage to try it out yourself.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p1 -b .testlib
-%patch1 -p1 -b .yamlxs
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
