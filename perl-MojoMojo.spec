@@ -102,6 +102,7 @@ BuildRequires:	perl(XML::LibXML)
 BuildRequires:	perl(XML::LibXSLT)
 BuildRequires:	perl(YAML::XS)
 BuildRequires:	perl(parent)
+BuildRequires:  perl(strictures)
 
 BuildArch:	noarch
 
@@ -137,43 +138,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 %{_bindir}/*
-
-%changelog
-* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 1.40.0-2mdv2011.0
-+ Revision: 657450
-- rebuild for updated spec-helper
-
-* Mon Mar 14 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.40.0-1
-+ Revision: 644768
-- update to new version 1.04
-
-* Tue Feb 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.30.0-1
-+ Revision: 634729
-- new version
-
-* Sun Sep 05 2010 Jérôme Quelin <jquelin@mandriva.org> 1.20.0-1mdv2011.0
-+ Revision: 576069
-- update buildrequires:
-- update to 1.02
-
-* Wed Jul 14 2010 Jérôme Quelin <jquelin@mandriva.org> 1.10.0-1mdv2011.0
-+ Revision: 553022
-- adding missing buildrequires:
-- adding missing buildrequires:
-- update to 1.01
-
-* Wed Dec 02 2009 Jérôme Quelin <jquelin@mandriva.org> 0.999.42-1mdv2010.1
-+ Revision: 472673
-- adding missing buildrequires:
-- update to 0.999042
-- no need to bump mkrel, previous builds failed
-- adding missing buildrequires:
-- add patch to run with yaml::xs
-- fix %%patch0 -b arg
-- adding files not packaged
-- adding patch to fix fragile regex in test lib
-- import perl-MojoMojo
-
-
-* Sun Nov 29 2009 cpan2dist 0.999041-1mdv
-- initial mdv release, generated with cpan2dist
